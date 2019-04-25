@@ -27,6 +27,8 @@ class Marca extends CI_Controller {
         $data['marca'] = $this->Marca_model->getAll();
         //Chama view
         $this->load->view('marca/lista', $data);
+        //Carrega rodapé
+        $this->load->view('includes/footer');
     }
 
     //Create
@@ -53,6 +55,8 @@ class Marca extends CI_Controller {
                 redirect('Marca/cadastrar');
             }
         }
+        //Carrega rodapé
+        $this->load->view('includes/footer');
     }
 
     //Delete
@@ -97,6 +101,7 @@ class Marca extends CI_Controller {
         } else {
             redirect('Marca/listar');
         }
+        //Carrega rodapé
+        $this->load->view('includes/footer');
     }
-
 }
