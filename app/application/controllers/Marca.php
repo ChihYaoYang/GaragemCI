@@ -19,6 +19,8 @@ class Marca extends CI_Controller {
 
     //Read
     public function listar() {
+        //Carrega Menu
+        $this->load->view('includes/header');
         //Carrega Model
         $this->Marca_model;
         //Chama método e criar $dado para armazena dados e fazer no view
@@ -29,6 +31,8 @@ class Marca extends CI_Controller {
 
     //Create
     public function cadastrar() {
+        //Carrega Menu
+        $this->load->view('includes/header');
         $this->form_validation->set_rules('descricao', 'descricao', 'required');
         if ($this->form_validation->run() == false) {
             //Se for false carrega marca de novo e preencher todos campos
@@ -67,6 +71,8 @@ class Marca extends CI_Controller {
 
     //Update
     public function alterar($id) {
+        //Carrega Menu
+        $this->load->view('includes/header');
         //Valida e carrega model
         if ($id > 0) {
             $this->Marca_model;
@@ -92,4 +98,5 @@ class Marca extends CI_Controller {
             redirect('Marca/listar');
         }
     }
+
 }

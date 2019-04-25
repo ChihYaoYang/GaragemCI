@@ -10,22 +10,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
     <body>
-         <!---Menu--->
-          <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-            <a class="navbar-brand breathe-div" href="<?= $this->config->base_url(); ?>"><i class="fas fa-store"></i> Sistema Garagem</a>
-            <!---Menu mobile--->
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a href="#" id="menuCliente" class="nav-link dropdown-toggle" data-toggle="dropdown">Clientes</a>
-                        <div class="dropdown-menu" aria-labelledby="menuCliente">
-                            <a href="<?= $this->config->base_url() . 'index.php/Marca/listar' ?>" class="dropdown-item">Listar</a>
-                            <a href="<?= $this->config->base_url() . 'index.php/Marca/cadastrar' ?>" class="dropdown-item">Cadastrar</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
         <div class="container mt-5">
             <!---Gerenciador de veículo--->
             <div class="row">
