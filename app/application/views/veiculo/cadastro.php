@@ -27,9 +27,7 @@
                                     echo '<div class="alert alert-danger" role="alert"><i class="fas fa-times"></i> ' . $erro . '</div>';
                                 }
                                 ?>
-
-
-
+                                
                                 <input type="hidden" name="acao" value="">
 
                                 <!---Campo Modelo--->
@@ -80,11 +78,7 @@
                                 </div>
 
                                 <hr>
-
-
-
                                 <div>
-                                    <hr>
                                     <!---campo botão--->
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Salvar</button>

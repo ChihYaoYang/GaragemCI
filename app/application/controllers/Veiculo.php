@@ -10,6 +10,7 @@ class Veiculo extends CI_Controller {
     //Construct
     public function __construct() {
         parent::__construct();
+        //Carrega model
         $this->load->model('Veiculo_model');
         $this->load->model('Marca_model');
     }

@@ -19,7 +19,7 @@
                     <div class="card">
                         <h3 class="card-header bg-transparent"><i class="fas fa-truck"></i>Marca cadastrados</h3>
                         <div class="card-body">
-                            <a class="btn btn-primary" href="<?= $this->config->base_url() . 'index.php/Marca/cadastrar/' ?>">Add marca</a>
+                            <a class="btn btn-primary" href="<?= base_url() . 'index.php/Marca/cadastrar/' ?>">Add marca</a>
                             <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <br>
@@ -47,8 +47,8 @@
                                             echo '<tr class="text-center">';
                                             echo '<td>' . $row->nome . '</td>';
                                             echo '<td>' . $row->produtos . '</td>';
-                                            echo '<td class="text-right">' . '<a class="btn btn-sm btn-outline-danger mr-2" href="' . $this->config->base_url() . 'index.php/Marca/deletar/' . $row->id . '"><i class="fas fa-trash-alt"></i> Delete</a>' .
-                                            '<a class="btn btn-sm btn-outline-warning" href="' . $this->config->base_url() . 'index.php/Marca/alterar/' . $row->id . '"><i class="fas fa-edit"></i> Alterar</a>'
+                                            echo '<td class="text-right">' . '<a class="btn btn-sm btn-outline-danger mr-2" href="' . base_url() . 'index.php/Marca/deletar/' . $row->id . '"><i class="fas fa-trash-alt"></i> Delete</a>' .
+                                            '<a class="btn btn-sm btn-outline-warning" href="' . base_url() . 'index.php/Marca/alterar/' . $row->id . '"><i class="fas fa-edit"></i> Alterar</a>'
                                             . '</td>';
                                             echo '</tr>';
                                         }
