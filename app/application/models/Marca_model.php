@@ -5,9 +5,7 @@
  */
 
 class Marca_model extends CI_Model {
-
     const table = 'marca';
-
     //Read
     public function getAll() {
         $this->db->select('*,(SELECT COUNT(marca_id) FROM veiculo WHERE marca_id=marca.id)as produtos');
@@ -52,7 +50,5 @@ class Marca_model extends CI_Model {
             return FALSE;
         }
     }
-
 }
-
 ?>

@@ -22,6 +22,11 @@
                             <form method="POST" action="">
                                 <!--campo input--->
                                 <?php
+                                //Mensagem
+                                $mensagem = $this->session->flashdata('mensagem');
+                                if (isset($mensagem)) {
+                                    echo '<div class="alert alert-success"> <i class="fas fa-check"></i>' . $mensagem . '</div>';
+                                }
                                 $erro = $this->session->flashdata('erro');
                                 if (isset($erro)) {
                                     echo '<div class="alert alert-danger" role="alert"><i class="fas fa-times"></i> ' . $erro . '</div>';

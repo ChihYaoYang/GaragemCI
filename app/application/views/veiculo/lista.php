@@ -14,17 +14,15 @@
             <div class="row">
                 <!--Veículo cadastrados--->
                 <div class="col">
-                    <h3>Gerenciador de Marca</h3> <hr>
                     <!---Card--->
                     <div class="card">
-                        <h3 class="card-header bg-transparent"><i class="fas fa-truck"></i>Marca cadastrados</h3>
+                        <h3 class="card-header bg-transparent"><i class="fas fa-truck"></i>Veículo cadastrados</h3>
                         <div class="card-body">
-                            <a class="btn btn-primary" href="<?= $this->config->base_url() . 'index.php/Marca/cadastrar/' ?>">Add marca</a>
+                            <a class="btn btn-primary" href="<?= base_url() . 'index.php/Veiculo/cadastrar/' ?>">Add Veículo</a>
                             <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <br>
                                     <?php
-                                    //Mensagem
                                     $mensagem = $this->session->flashdata('mensagem');
                                     if (isset($mensagem)) {
                                         echo '<div class="alert alert-success"> <i class="fas fa-check"></i>' . $mensagem . '</div>';
@@ -36,19 +34,25 @@
                                     ?>
                                     <thead>
                                         <tr class="text-center">
+                                            <th scope="col">Imagem</th>
+                                            <th scope="col">Modelo</th>
+                                            <th scope="col">Preço</th>
                                             <th scope="col">Marca</th>
-                                            <th scope="col">Produtos</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Opção</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
-                                        foreach ($marca as $row) {
+                                        foreach ($veiculo as $row) {
                                             echo '<tr class="text-center">';
+                                            echo '<td>' . $row->imagem . '</td>';
+                                            echo '<td>' . $row->modelo . '</td>';
+                                            echo '<td>' . $row->preco . ' R$' . '</td>';
                                             echo '<td>' . $row->nome . '</td>';
-                                            echo '<td>' . $row->produtos . '</td>';
-                                            echo '<td class="text-right">' . '<a class="btn btn-sm btn-outline-danger mr-2" href="' . $this->config->base_url() . 'index.php/Marca/deletar/' . $row->id . '"><i class="fas fa-trash-alt"></i> Delete</a>' .
-                                            '<a class="btn btn-sm btn-outline-warning" href="' . $this->config->base_url() . 'index.php/Marca/alterar/' . $row->id . '"><i class="fas fa-edit"></i> Alterar</a>'
+                                            echo '<td>' . $row->status . '</td>';
+                                            echo '<td class="text-right">' . '<a class="btn btn-sm btn-outline-danger mr-2" href="' . $this->config->base_url() . 'index.php/Veiculo/deletar/' . $row->id . '"><i class="fas fa-trash-alt"></i> Delete</a>' .
+                                            '<a class="btn btn-sm btn-outline-warning" href="' . $this->config->base_url() . 'index.php/Veiculo/alterar/' . $row->id . '"><i class="fas fa-edit"></i> Alterar</a>'
                                             . '</td>';
                                             echo '</tr>';
                                         }
