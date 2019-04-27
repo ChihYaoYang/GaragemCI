@@ -15,11 +15,6 @@
 
 <body>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
     .social:hover {
         -webkit-transform: scale(1.1);
         -moz-transform: scale(1.1);
@@ -52,16 +47,25 @@
     #social-em:hover {
         color: #f39c12;
     }
+
+    .container {
+        width: auto;
+        max-width: auto;
+        padding: 0 15px;
+
+    }
     </style>
-    <footer>
+
+    <footer class="footer mt-auto py-5">
         <div class="container">
-            <div class="fixed-bottom footer text-center center-block bg-dark">
+            <div class="fixed-bottom text-center center-block bg-dark">
                 <a href="https://github.com/ChihYaoYang/GaragemCI"><i id="social-git"
                         class="fab fa-github-square fa-3x social"></i></a>
                 <a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
                 <a href="#"><i id="social-gp" class="fab fa-google-plus-square fa-3x social"></i></a>
                 <a href="#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
             </div>
+        </div>
     </footer>
     <!--Bootstrap---->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

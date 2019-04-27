@@ -13,11 +13,6 @@
 
 <body>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
     .breathe-div {
         cursor:Default;
         border: 1px solid #2b92d4;
