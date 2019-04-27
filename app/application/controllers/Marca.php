@@ -47,8 +47,6 @@ class Marca extends CI_Controller {
                 redirect('Marca/cadastrar');
             }
         }
-        //Carrega rodapé
-        $this->load->view('includes/footer');
     }
 
     //Delete
@@ -74,8 +72,6 @@ class Marca extends CI_Controller {
         $this->load->view('includes/footer');
     }
     public function alterar($id) {
-        //Carrega Menu
-        $this->load->view('includes/header');
         //Valida e carrega model
         if ($id > 0) {
             $this->Marca_model;
@@ -100,8 +96,6 @@ class Marca extends CI_Controller {
         } else {
             redirect('Marca/index');
         }
-        //Carrega rodapé
-        $this->load->view('includes/footer');
     }
 
 }
