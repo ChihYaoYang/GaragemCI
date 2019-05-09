@@ -89,7 +89,7 @@ class Veiculo extends CI_Controller {
         //Valida
         if ($id > 0) {
             $this->Veiculo_model;
-            if ($this->Veiculo_model->delete($id) > 0) {
+            if ($this->Veiculo_model->delete($id)) {
                 $this->session->set_flashdata('mensagem', ' Veículo deletado com sucesso! ! !');
             } else {
                  $this->session->set_flashdata('erro', ' Erro ao deletar Veículo *_*');
